@@ -30,7 +30,10 @@ def from_hex_string(hex_string):
 # Get input from the user for the encrypted message (in hexadecimal format) and the key.
 hex_encrypted_message = input("Enter the encrypted message (hex): ")
 key = input("Enter the key: ")
-
+# To add salt
+salt1v = "%42hsad"
+salt2v = "asd67d"
+key = salt2v + key + salt1v
 # Convert the hexadecimal string back to the original encrypted message.
 # This involves converting the hex representation into a regular string of characters.
 encrypted_message = from_hex_string(hex_encrypted_message)

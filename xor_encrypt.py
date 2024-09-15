@@ -25,7 +25,10 @@ def to_hex_string(s):
 # Get input from the user for the message to be encrypted and the key to use for encryption.
 message = input("Enter the message to encrypt: ")
 key = input("Enter the key: ")
-
+# To add salt
+salt1v = "%42hsad"
+salt2v = "asd67d"
+key = salt2v + key + salt1v
 # Encrypt the message using the provided key. This returns the encrypted message as a string.
 encrypted_message = xor_encrypt(message, key)
 
